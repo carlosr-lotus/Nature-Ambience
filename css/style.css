@@ -1,0 +1,114 @@
+/* Global Configurations */
+:root {
+    /* Default Colors */
+    --Default-White: #fff;
+    --Default-Black: #000;
+
+    /* Symbols color */
+    --Moon-Hover-Color: #554EF5;
+    --Sun-Hover-Color: #F5E053;
+
+    /* 1rem = 10px */
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+    font-family: 'Dancing Script',
+        cursive;
+    font-size: 5.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../images/morning/waterfall-morning.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Adjust main tag elements */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--Default-White);
+}
+
+.nature-name {
+    font-size: 6.8rem;
+    text-align: center;
+}
+
+/* Container with the change day/night buttons */
+.morning-night-container {
+    font-size: 4.5rem;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#sun,
+#moon {
+    cursor: pointer;
+
+    margin: 1.2rem;
+    padding: .5rem;
+
+    border: 2px solid var(--Default-White);
+    border-radius: 5px;
+
+    transition: .5s;
+}
+
+#sun:hover {
+    transform: scale(1.1);
+    color: var(--Sun-Hover-Color);
+}
+
+#moon:hover {
+    transform: scale(1.1);
+    color: var(--Moon-Hover-Color);
+}
+
+.arrow-container {
+    margin-top: 2.5rem;
+}
+
+.arrow-container i {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.arrow-container i:hover {
+    opacity: 1;
+}
+
+/* Tablet Media */
+@media (min-width: 768px) and (max-width: 1366px) {
+    .nature-name {
+        font-size: 9.8rem;
+        text-align: center;
+    }
+
+    .morning-night-container {
+        font-size: 6.5rem;
+
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .arrow-container i {
+        font-size: 7rem;
+    }
+}
