@@ -19,16 +19,16 @@ let arrayKey = 0;
 // Page Nature Data
 const pageManager = [{
     name: 'Waterfall',
-    morning: 'url(../images/morning/waterfall-morning.jpg)',
-    morningAudio: new Audio('../audio/morning/waterfall-morning.mp3'),
-    night: 'url(../images/night/waterfall-night.jpg)',
-    nightAudio: new Audio('../audio/night/waterfall-night.mp3')
+    morning: 'url(images/morning/waterfall-morning.jpg)',
+    morningAudio: new Audio('audio/morning/waterfall-morning.mp3'),
+    night: 'url(images/night/waterfall-night.jpg)',
+    nightAudio: new Audio('audio/night/waterfall-night.mp3')
 },{
     name: 'Beach',
-    morning: 'url(../images/morning/beach-morning.jpg)',
-    morningAudio: new Audio('../audio/morning/beach-morning.mp3'),
-    night: 'url(../images/night/beach-night.jpeg)',
-    nightAudio: new Audio('../audio/night/beach-night.mp3')
+    morning: 'url(images/morning/beach-morning.jpg)',
+    morningAudio: new Audio('audio/morning/beach-morning.mp3'),
+    night: 'url(images/night/beach-night.jpeg)',
+    nightAudio: new Audio('audio/night/beach-night.mp3')
 }];
 
 // Previous/Next buttons EVENTS
