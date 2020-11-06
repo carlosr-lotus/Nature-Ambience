@@ -16,7 +16,7 @@
 
 Below the icons, we'll see two arrows (left, right) so the user can access other natural ambiences.
 
-- Current ambiences available: Waterfall, Beach.
+- Current ambiences available: **Waterfall, Beach**.
 
 ## Update 11/06/2020
 
