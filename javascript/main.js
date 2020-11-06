@@ -77,6 +77,8 @@ nextBtn.addEventListener('click', () => {
 // Change current ambience day/night
 sunIcon.addEventListener('click', () => {
     wallpaper.style.transition = '2s';
+
+    pageManager[arrayKey].morningAudio.loop = true;
     pageManager[arrayKey].morningAudio.play();
     pageManager[arrayKey].nightAudio.pause();
     pageManager[arrayKey].nightAudio.currentTime = 0;
@@ -85,6 +87,8 @@ sunIcon.addEventListener('click', () => {
 
 moonIcon.addEventListener('click', () => {
     wallpaper.style.transition = '2s';
+
+    pageManager[arrayKey].nightAudio.loop = true;
     pageManager[arrayKey].nightAudio.play();
     pageManager[arrayKey].morningAudio.pause();
     pageManager[arrayKey].morningAudio.currentTime = 0;

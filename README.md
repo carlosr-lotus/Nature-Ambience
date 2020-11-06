@@ -1,6 +1,6 @@
 # Nature Ambience
 
-- Website link: https://suspicious-easley-9e9ce3.netlify.app
+- Website link: https://flamboyant-bose-16f9b6.netlify.app
 
 ## About Project
 
@@ -17,3 +17,7 @@
 Below the icons, we'll see two arrows (left, right) so the user can access other natural ambiences.
 
 - Current ambiences available: Waterfall, Beach.
+
+## Update 11/06/2020
+
+- Improved website performance.
