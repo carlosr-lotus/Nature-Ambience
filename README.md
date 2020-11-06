@@ -1,6 +1,6 @@
 # Nature Ambience
 
-- Website link: https://flamboyant-bose-16f9b6.netlify.app
+- Website link: https://vigilant-shaw-1f4c53.netlify.app/
 
 ## About Project
 

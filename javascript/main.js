@@ -1,20 +1,17 @@
 // Nature Name + Main Wallpaper
-let wallpaper = document.querySelector('#background');
-let natureName = document.querySelector('.nature-name');
+const wallpaper = document.querySelector('#background');
+const natureName = document.querySelector('.nature-name');
 
 // Day/Night buttons
-let sunIcon = document.querySelector('#sun');
-let moonIcon = document.querySelector('#moon');
+const sunIcon = document.querySelector('#sun');
+const moonIcon = document.querySelector('#moon');
 
 // Previous/Next buttons
-let prevBtn = document.querySelector('#previous');
-let nextBtn = document.querySelector('#next');
-
-// let audioTestMorning = new Audio('../audio/morning/waterfall-morning.mp3');
-let audioTestNight = new Audio();
+const prevBtn = document.querySelector('#previous');
+const nextBtn = document.querySelector('#next');
 
 // Page Manager Array Selector
-let arrayKey = 0;
+let arrayIndexObject = 0;
 
 // Page Nature Data
 const pageManager = [{
@@ -33,10 +30,10 @@ const pageManager = [{
 
 // Previous/Next buttons EVENTS
 prevBtn.addEventListener('click', () => {
-    arrayKey--;
+    arrayIndexObject--;
 
-    if (arrayKey < 0) {
-        arrayKey = pageManager.length - 1;
+    if (arrayIndexObject < 0) {
+        arrayIndexObject = pageManager.length - 1;
         pageManager[0].nightAudio.pause();
         pageManager[0].nightAudio.currentTime = 0;
         pageManager[0].morningAudio.pause();
@@ -44,20 +41,20 @@ prevBtn.addEventListener('click', () => {
     }
 
     wallpaper.style.transition = '2s';
-    natureName.innerText = pageManager[arrayKey].name;
-    wallpaper.style.backgroundImage = pageManager[arrayKey].morning;
+    natureName.innerText = pageManager[arrayIndexObject].name;
+    wallpaper.style.backgroundImage = pageManager[arrayIndexObject].morning;
 
-    pageManager[arrayKey+1].nightAudio.pause();
-    pageManager[arrayKey+1].nightAudio.currentTime = 0;
-    pageManager[arrayKey+1].morningAudio.pause();
-    pageManager[arrayKey+1].morningAudio.currentTime = 0;
+    pageManager[arrayIndexObject+1].nightAudio.pause();
+    pageManager[arrayIndexObject+1].nightAudio.currentTime = 0;
+    pageManager[arrayIndexObject+1].morningAudio.pause();
+    pageManager[arrayIndexObject+1].morningAudio.currentTime = 0;
 });
 
 nextBtn.addEventListener('click', () => {
-    arrayKey++;
+    arrayIndexObject++;
 
-    if(arrayKey > pageManager.length - 1) {
-        arrayKey = 0;
+    if(arrayIndexObject > pageManager.length - 1) {
+        arrayIndexObject = 0;
         pageManager[pageManager.length-1].nightAudio.pause();
         pageManager[pageManager.length-1].nightAudio.currentTime = 0;
         pageManager[pageManager.length-1].morningAudio.pause();
@@ -65,32 +62,32 @@ nextBtn.addEventListener('click', () => {
     }
 
     wallpaper.style.transition = '2s';
-    natureName.innerText = pageManager[arrayKey].name;
-    wallpaper.style.backgroundImage = pageManager[arrayKey].morning;
+    natureName.innerText = pageManager[arrayIndexObject].name;
+    wallpaper.style.backgroundImage = pageManager[arrayIndexObject].morning;
 
-    pageManager[arrayKey-1].nightAudio.pause();
-    pageManager[arrayKey-1].nightAudio.currentTime = 0;
-    pageManager[arrayKey-1].morningAudio.pause();
-    pageManager[arrayKey-1].morningAudio.currentTime = 0;
+    pageManager[arrayIndexObject-1].nightAudio.pause();
+    pageManager[arrayIndexObject-1].nightAudio.currentTime = 0;
+    pageManager[arrayIndexObject-1].morningAudio.pause();
+    pageManager[arrayIndexObject-1].morningAudio.currentTime = 0;
 });
 
 // Change current ambience day/night
 sunIcon.addEventListener('click', () => {
     wallpaper.style.transition = '2s';
 
-    pageManager[arrayKey].morningAudio.loop = true;
-    pageManager[arrayKey].morningAudio.play();
-    pageManager[arrayKey].nightAudio.pause();
-    pageManager[arrayKey].nightAudio.currentTime = 0;
-    wallpaper.style.backgroundImage = pageManager[arrayKey].morning;
+    pageManager[arrayIndexObject].morningAudio.loop = true;
+    pageManager[arrayIndexObject].morningAudio.play();
+    pageManager[arrayIndexObject].nightAudio.pause();
+    pageManager[arrayIndexObject].nightAudio.currentTime = 0;
+    wallpaper.style.backgroundImage = pageManager[arrayIndexObject].morning;
 });
 
 moonIcon.addEventListener('click', () => {
     wallpaper.style.transition = '2s';
 
-    pageManager[arrayKey].nightAudio.loop = true;
-    pageManager[arrayKey].nightAudio.play();
-    pageManager[arrayKey].morningAudio.pause();
-    pageManager[arrayKey].morningAudio.currentTime = 0;
-    wallpaper.style.backgroundImage = pageManager[arrayKey].night;
+    pageManager[arrayIndexObject].nightAudio.loop = true;
+    pageManager[arrayIndexObject].nightAudio.play();
+    pageManager[arrayIndexObject].morningAudio.pause();
+    pageManager[arrayIndexObject].morningAudio.currentTime = 0;
+    wallpaper.style.backgroundImage = pageManager[arrayIndexObject].night;
 });
