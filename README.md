@@ -1,6 +1,6 @@
 # Nature Ambience
 
-- Website link: https://vigilant-shaw-1f4c53.netlify.app/
+- Website link: https://peaceful-lewin-738db5.netlify.app/
 
 ## About Project
 
@@ -21,3 +21,7 @@ Below the icons, we'll see two arrows (left, right) so the user can access other
 ## Update 11/06/2020
 
 - Improved website performance.
+
+## Update 11/21/2020
+
+- Deleted unnecessary files.
